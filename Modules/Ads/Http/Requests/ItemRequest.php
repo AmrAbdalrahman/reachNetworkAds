@@ -5,7 +5,7 @@ namespace Modules\Ads\Http\Requests;
 use App\Http\Requests\AbstractRequest;
 
 
-class TagRequest extends AbstractRequest
+class ItemRequest extends AbstractRequest
 {
     /**
      * @inheritDoc

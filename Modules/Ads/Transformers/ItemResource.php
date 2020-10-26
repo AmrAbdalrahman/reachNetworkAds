@@ -4,7 +4,7 @@ namespace Modules\Ads\Transformers;
 
 use Illuminate\Http\Resources\Json\JsonResource;
 
-class TagResource extends JsonResource
+class ItemResource extends JsonResource
 {
     /**
      * Transform the resource collection into an array.

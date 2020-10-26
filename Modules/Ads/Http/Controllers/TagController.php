@@ -3,13 +3,11 @@
 namespace Modules\Ads\Http\Controllers;
 
 use App\Traits\ApiResponseTrait;
-use Illuminate\Contracts\Support\Renderable;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;
-use Modules\Ads\Http\Requests\TagRequest;
+use Modules\Ads\Http\Requests\ItemRequest;
 use Modules\Ads\Repositories\TagsRepository;
-use Modules\Ads\Transformers\TagResource;
-use phpDocumentor\Reflection\Types\Void_;
+use Modules\Ads\Transformers\ItemResource;
 
 class TagController extends Controller
 {
@@ -27,16 +25,16 @@ class TagController extends Controller
     {
         $tags = $this->tagsRepository->getAll();
         if (count($tags) > 0) {
-            return $this->apiResponse(TagResource::collection($tags));
+            return $this->apiResponse(ItemResource::collection($tags));
         }
         return $this->notFoundResponse('no tags found');
     }
 
     /**
      * Store a newly created resource in storage.
-     * @param TagRequest $request
+     * @param ItemRequest $request
      */
-    public function store(TagRequest $request)
+    public function store(ItemRequest $request)
     {
 
         if ($this->tagsRepository->create($request)) {
@@ -54,7 +52,7 @@ class TagController extends Controller
     {
         $tag = $this->tagsRepository->get($id);
         if ($tag) {
-            return $this->apiResponse(new TagResource($tag));
+            return $this->apiResponse(new ItemResource($tag));
         }
         return $this->notFoundResponse("no tag found");
     }
@@ -65,7 +63,7 @@ class TagController extends Controller
      * @param Request $request
      * @param int $id
      */
-    public function update(TagRequest $request, $id)
+    public function update(ItemRequest $request, $id)
     {
         if ($this->tagsRepository->update($request, $id)) {
             return $this->apiResponse("tag updated successfully");

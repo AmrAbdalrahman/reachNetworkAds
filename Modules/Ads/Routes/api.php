@@ -29,3 +29,18 @@ Route::group(['prefix' => 'tags'], function () {
 });
 /********** end tags route ***********/
 
+/********** start categories route ***********/
+Route::group(['prefix' => 'categories'], function () {
+
+    Route::get('/', ['uses' => 'CategoryController@index']);
+
+    Route::post('create', ['uses' => 'CategoryController@store']);
+
+    Route::get('{id}', ['uses' => 'CategoryController@show']);
+
+    Route::patch('{id}', ['uses' => 'CategoryController@update']);
+
+    Route::delete('{id}', ['uses' => 'CategoryController@destroy']);
+});
+/********** end categories route ***********/
+

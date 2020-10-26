@@ -2,16 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7461a5b3-65e4-4090-927a-6bab4b99fc55" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Modules/Ads/Entities/Tag.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Modules/Ads/Http/Controllers/TagController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Modules/Ads/Http/Requests/TagRequest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Modules/Ads/Interfaces/AdsRepositoryInterface.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Modules/Ads/Repositories/TagsRepository.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Modules/Ads/Transformers/TagResource.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Requests/AbstractRequest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Traits/ApiResponseTrait.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Modules/Ads/Entities/Category.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Modules/Ads/Http/Controllers/CategoryController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Modules/Ads/Repositories/CategoriesRepository.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Modules/Ads/Http/Controllers/TagController.php" beforeDir="false" afterPath="$PROJECT_DIR$/Modules/Ads/Http/Controllers/TagController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Modules/Ads/Http/Requests/TagRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/Modules/Ads/Http/Requests/ItemRequest.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Modules/Ads/Routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/Modules/Ads/Routes/api.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Modules/Ads/Transformers/TagResource.php" beforeDir="false" afterPath="$PROJECT_DIR$/Modules/Ads/Transformers/ItemResource.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -141,7 +139,7 @@
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/app" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/Modules/Ads/Repositories" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
@@ -150,6 +148,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/Modules/Ads/Repositories" />
       <recent name="$PROJECT_DIR$/app" />
       <recent name="$PROJECT_DIR$/Modules/Ads" />
       <recent name="$PROJECT_DIR$" />
@@ -170,7 +169,7 @@
       <option name="presentableId" value="Default" />
       <updated>1603719705051</updated>
       <workItem from="1603719706141" duration="747000" />
-      <workItem from="1603720461008" duration="8366000" />
+      <workItem from="1603720461008" duration="9349000" />
     </task>
     <servers />
   </component>
@@ -181,14 +180,14 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="400" y="23" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1603724267653">
+    <state x="400" y="23" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1603730364945">
       <screen x="0" y="23" width="1440" height="825" />
     </state>
-    <state x="400" y="23" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.23.1440.825@0.23.1440.825" timestamp="1603724267653" />
-    <state x="458" y="196" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1603728996460">
+    <state x="400" y="23" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.23.1440.825@0.23.1440.825" timestamp="1603730364945" />
+    <state x="458" y="196" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1603730336817">
       <screen x="0" y="23" width="1440" height="825" />
     </state>
-    <state x="458" y="196" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.23.1440.825@0.23.1440.825" timestamp="1603728996460" />
+    <state x="458" y="196" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.23.1440.825@0.23.1440.825" timestamp="1603730336817" />
     <state x="474" y="353" key="ComposerInitDialogKey" timestamp="1603720275778">
       <screen x="0" y="23" width="1440" height="825" />
     </state>
