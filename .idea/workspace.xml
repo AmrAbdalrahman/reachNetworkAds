@@ -2,20 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7461a5b3-65e4-4090-927a-6bab4b99fc55" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Modules/Ads/Console/SendAdvertisersEmailReminder.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Modules/Ads/Jobs/SendAdvertiserReminderEmail.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/helpers/helpers.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2020_10_26_215606_create_jobs_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.env.example" beforeDir="false" afterPath="$PROJECT_DIR$/.env.example" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/reachNetwrk.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/reachNetwrk.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Modules/Ads/Interfaces/AdsRepositoryInterface.php" beforeDir="false" afterPath="$PROJECT_DIR$/Modules/Ads/Interfaces/AdsRepositoryInterface.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Modules/Ads/Repositories/AdsRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/Modules/Ads/Repositories/AdsRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Console/Kernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Console/Kernel.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/app.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/app.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -180,7 +168,7 @@
       <updated>1603719705051</updated>
       <workItem from="1603719706141" duration="747000" />
       <workItem from="1603720461008" duration="21172000" />
-      <workItem from="1603745895048" duration="3174000" />
+      <workItem from="1603745895048" duration="4288000" />
     </task>
     <servers />
   </component>
