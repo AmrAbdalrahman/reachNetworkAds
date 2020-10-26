@@ -5,9 +5,9 @@ namespace Modules\Ads\Repositories;
 
 use App\Http\Requests\AbstractRequest;
 use Modules\Ads\Entities\Category;
-use Modules\Ads\Interfaces\AdsRepositoryInterface;
+use Modules\Ads\Interfaces\ItemRepositoryInterface;
 
-class CategoriesRepository implements AdsRepositoryInterface
+class CategoriesRepository implements ItemRepositoryInterface
 {
 
     protected $category;

@@ -44,3 +44,14 @@ Route::group(['prefix' => 'categories'], function () {
 });
 /********** end categories route ***********/
 
+
+/********** start categories route ***********/
+Route::group(['prefix' => 'ads'], function () {
+
+    Route::get('/', ['uses' => 'AdsController@index']);
+
+    Route::post('create', ['uses' => 'AdsController@store']);
+
+});
+/********** end categories route ***********/
+

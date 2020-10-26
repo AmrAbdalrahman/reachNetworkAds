@@ -5,9 +5,9 @@ namespace Modules\Ads\Repositories;
 
 use App\Http\Requests\AbstractRequest;
 use Modules\Ads\Entities\Tag;
-use Modules\Ads\Interfaces\AdsRepositoryInterface;
+use Modules\Ads\Interfaces\ItemRepositoryInterface;
 
-class TagsRepository implements AdsRepositoryInterface
+class TagsRepository implements ItemRepositoryInterface
 {
 
     protected $tag;

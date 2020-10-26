@@ -2,78 +2,42 @@
 
 namespace Modules\Ads\Http\Controllers;
 
-use Illuminate\Contracts\Support\Renderable;
-use Illuminate\Http\Request;
+use App\Traits\ApiResponseTrait;
 use Illuminate\Routing\Controller;
+use Modules\Ads\Http\Requests\AdsRequest;
+use Modules\Ads\Repositories\AdsRepository;
+use Modules\Ads\Transformers\AdResource;
 
 class AdsController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     * @return Renderable
-     */
-    public function index()
+    use ApiResponseTrait;
+
+    private $adsRepository;
+
+    public function __construct(AdsRepository $adsRepository)
     {
-        return view('ads::index');
+        $this->adsRepository = $adsRepository;
     }
 
-    /**
-     * Show the form for creating a new resource.
-     * @return Renderable
-     */
-    public function create()
+
+    public function index()
     {
-        return view('ads::create');
+        $ads = $this->adsRepository->getAll();
+        if (count($ads) > 0) {
+            return $this->apiResponse(AdResource::collection($ads));
+        }
+        return $this->notFoundResponse('no ads found');
     }
 
     /**
      * Store a newly created resource in storage.
-     * @param Request $request
-     * @return Renderable
+     * @param AdsRequest $request
      */
-    public function store(Request $request)
+    public function store(AdsRequest $request)
     {
-        //
-    }
-
-    /**
-     * Show the specified resource.
-     * @param int $id
-     * @return Renderable
-     */
-    public function show($id)
-    {
-        return view('ads::show');
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     * @param int $id
-     * @return Renderable
-     */
-    public function edit($id)
-    {
-        return view('ads::edit');
-    }
-
-    /**
-     * Update the specified resource in storage.
-     * @param Request $request
-     * @param int $id
-     * @return Renderable
-     */
-    public function update(Request $request, $id)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     * @param int $id
-     * @return Renderable
-     */
-    public function destroy($id)
-    {
-        //
+        if ($this->adsRepository->create($request)) {
+            return $this->apiResponse("Ad added successfully");
+        }
+        return $this->unKnowError("Error while saving the Ad");
     }
 }
