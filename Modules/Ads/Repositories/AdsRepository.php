@@ -3,6 +3,7 @@
 namespace Modules\Ads\Repositories;
 
 use App\Http\Requests\AbstractRequest;
+use Carbon\Carbon;
 use Modules\Ads\Entities\Ads;
 use Modules\Ads\Entities\AdsTags;
 use Modules\Ads\Entities\Tag;
@@ -61,6 +62,16 @@ class AdsRepository implements AdsRepositoryInterface
     {
         return $this->ads->where('advertiser_id', $id)->orderBy('id', 'DESC')->get();
     }
+
+    public function tomorrowAds()
+    {
+        $tomorrowDate = Carbon::tomorrow();
+       return $this->ads->where('start_date', $tomorrowDate)->orderBy('id', 'DESC')->with('advertiser')->get();
+    }
+
+
+
+
 
 
 }

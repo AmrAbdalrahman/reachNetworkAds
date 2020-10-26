@@ -39,4 +39,9 @@ interface AdsRepositoryInterface
      */
     public function advertiserAds($id);
 
+    /**
+     * @return mixed
+     */
+    function tomorrowAds();
+
 }
