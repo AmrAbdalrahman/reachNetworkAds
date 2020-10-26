@@ -21,4 +21,16 @@ interface AdsRepositoryInterface
      */
     public function create(AbstractRequest $request);
 
+    /**
+     * @param $id
+     * @return mixed
+     */
+    public function categoryAds($id);
+
+    /**
+     * @param $id
+     * @return mixed
+     */
+    public function tagAds($id);
+
 }

@@ -11,4 +11,9 @@ class Tag extends Model
 
     protected $table = 'tags';
     protected $fillable = ['name', 'created_at', 'updated_at', 'deleted_at'];
+
+    public function ads()
+    {
+        return $this->belongsToMany('Modules\Ads\Entities\Ads', 'ads_tags','tags_id','ads_id');
+    }
 }

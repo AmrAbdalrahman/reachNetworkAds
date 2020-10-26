@@ -40,4 +40,30 @@ class AdsController extends Controller
         }
         return $this->unKnowError("Error while saving the Ad");
     }
+
+    /**
+     * @param $id
+     * @return mixed
+     */
+    public function filterByCategory($id)
+    {
+        $ads = $this->adsRepository->categoryAds($id);
+        if (count($ads) > 0) {
+            return $this->apiResponse(AdResource::collection($ads));
+        }
+        return $this->notFoundResponse('no ads found for this category');
+    }
+
+    /**
+     * @param $id
+     * @return mixed
+     */
+    public function filterByTag($id)
+    {
+        $ads = $this->adsRepository->tagAds($id);
+        if (count($ads) > 0) {
+            return $this->apiResponse(AdResource::collection($ads));
+        }
+        return $this->notFoundResponse('no ads found for this tag');
+    }
 }

@@ -5,16 +5,19 @@ namespace Modules\Ads\Repositories;
 use App\Http\Requests\AbstractRequest;
 use Modules\Ads\Entities\Ads;
 use Modules\Ads\Entities\AdsTags;
+use Modules\Ads\Entities\Tag;
 use Modules\Ads\Interfaces\AdsRepositoryInterface;
 
 class AdsRepository implements AdsRepositoryInterface
 {
 
     protected $ads;
+    protected $tag;
 
-    public function __construct(Ads $ads)
+    public function __construct(Ads $ads, Tag $tag)
     {
         $this->ads = $ads;
+        $this->tag = $tag;
     }
 
     public function create(AbstractRequest $request)
@@ -41,6 +44,17 @@ class AdsRepository implements AdsRepositoryInterface
     public function getAll()
     {
         return $this->ads->orderBy('id', 'DESC')->get();
+    }
+
+    public function categoryAds($id)
+    {
+        return $this->ads->where('category_id', $id)->orderBy('id', 'DESC')->get();
+    }
+
+    public function tagAds($id)
+    {
+        $tag = $this->tag->findOrFail($id);
+        return $tag->ads;
     }
 
 

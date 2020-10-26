@@ -52,6 +52,13 @@ Route::group(['prefix' => 'ads'], function () {
 
     Route::post('create', ['uses' => 'AdsController@store']);
 
+    #filte part
+    Route::group(['prefix' => 'filter'], function () {
+
+        Route::get('category/{id}', ['uses' => 'AdsController@filterByCategory']);
+        Route::get('tag/{id}', ['uses' => 'AdsController@filterByTag']);
+    });
+
 });
 /********** end categories route ***********/
 
