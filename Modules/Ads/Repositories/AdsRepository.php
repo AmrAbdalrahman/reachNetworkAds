@@ -57,5 +57,10 @@ class AdsRepository implements AdsRepositoryInterface
         return $tag->ads;
     }
 
+    public function advertiserAds($id)
+    {
+        return $this->ads->where('advertiser_id', $id)->orderBy('id', 'DESC')->get();
+    }
+
 
 }

@@ -59,6 +59,9 @@ Route::group(['prefix' => 'ads'], function () {
         Route::get('tag/{id}', ['uses' => 'AdsController@filterByTag']);
     });
 
+    #advertiser part
+    Route::get('advertiser/{id}', ['uses' => 'AdsController@advertiserAds']);
+
 });
 /********** end categories route ***********/
 

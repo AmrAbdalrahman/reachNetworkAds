@@ -33,4 +33,10 @@ interface AdsRepositoryInterface
      */
     public function tagAds($id);
 
+    /**
+     * @param $id
+     * @return mixed
+     */
+    public function advertiserAds($id);
+
 }

@@ -66,4 +66,17 @@ class AdsController extends Controller
         }
         return $this->notFoundResponse('no ads found for this tag');
     }
+
+    /**
+     * @param $id
+     * @return mixed
+     */
+    public function advertiserAds($id)
+    {
+        $ads = $this->adsRepository->advertiserAds($id);
+        if (count($ads) > 0) {
+            return $this->apiResponse(AdResource::collection($ads));
+        }
+        return $this->notFoundResponse('no ads found for this advertiser');
+    }
 }
