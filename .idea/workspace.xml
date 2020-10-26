@@ -2,14 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7461a5b3-65e4-4090-927a-6bab4b99fc55" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Modules/Ads/Database/Migrations/2020_10_26_140733_create_tags_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Modules/Ads/Database/Migrations/2020_10_26_140809_create_categories_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Modules/Ads/Database/Migrations/2020_10_26_140857_create_ads_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Modules/Ads/Database/Migrations/2020_10_26_140939_create_ads_tags_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/seeds/AdvertisersTableSeeder.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Modules/Ads/Entities/Tag.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Modules/Ads/Http/Controllers/TagController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Modules/Ads/Http/Requests/TagRequest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Modules/Ads/Interfaces/AdsRepositoryInterface.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Modules/Ads/Repositories/TagsRepository.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Modules/Ads/Transformers/TagResource.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Requests/AbstractRequest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Traits/ApiResponseTrait.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Modules/Ads/Routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/Modules/Ads/Routes/api.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -139,14 +141,17 @@
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/app" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app" />
+      <recent name="$PROJECT_DIR$/Modules/Ads" />
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
@@ -165,7 +170,7 @@
       <option name="presentableId" value="Default" />
       <updated>1603719705051</updated>
       <workItem from="1603719706141" duration="747000" />
-      <workItem from="1603720461008" duration="2059000" />
+      <workItem from="1603720461008" duration="8366000" />
     </task>
     <servers />
   </component>
@@ -176,9 +181,29 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="400" y="23" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1603724267653">
+      <screen x="0" y="23" width="1440" height="825" />
+    </state>
+    <state x="400" y="23" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.23.1440.825@0.23.1440.825" timestamp="1603724267653" />
+    <state x="458" y="196" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1603728996460">
+      <screen x="0" y="23" width="1440" height="825" />
+    </state>
+    <state x="458" y="196" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.23.1440.825@0.23.1440.825" timestamp="1603728996460" />
     <state x="474" y="353" key="ComposerInitDialogKey" timestamp="1603720275778">
       <screen x="0" y="23" width="1440" height="825" />
     </state>
     <state x="474" y="353" key="ComposerInitDialogKey/0.23.1440.825@0.23.1440.825" timestamp="1603720275778" />
+    <state x="221" y="73" key="SettingsEditor" timestamp="1603724022436">
+      <screen x="0" y="23" width="1440" height="825" />
+    </state>
+    <state x="221" y="73" key="SettingsEditor/0.23.1440.825@0.23.1440.825" timestamp="1603724022436" />
+    <state width="600" height="428" key="javadoc.popup" timestamp="1603723843023">
+      <screen x="0" y="23" width="1440" height="825" />
+    </state>
+    <state width="600" height="428" key="javadoc.popup/0.23.1440.825@0.23.1440.825" timestamp="1603723843022" />
+    <state x="385" y="197" key="run.anything.popup" timestamp="1603723334265">
+      <screen x="0" y="23" width="1440" height="825" />
+    </state>
+    <state x="385" y="197" key="run.anything.popup/0.23.1440.825@0.23.1440.825" timestamp="1603723334265" />
   </component>
 </project>
